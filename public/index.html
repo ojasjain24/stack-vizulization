@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Data Structure</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Stack Data Structure Implementation</h1>
+        <p>Push, pop, and manage integers in a configurable stack</p>
+      </header>
+
+      <div class="main-content">
+        <!-- Stack Configuration -->
+        <div class="config-section">
+          <h2>Stack Configuration</h2>
+          <div class="form-group">
+            <label for="maxSize">Maximum Stack Size:</label>
+            <input
+              type="number"
+              id="maxSize"
+              min="1"
+              max="100"
+              value="10"
+              required
+            />
+            <button id="updateSizeBtn" class="btn btn-primary">
+              Update Size
+            </button>
+          </div>
+          <div class="stack-info">
+            <span id="currentSize">Current: 0/10</span>
+            <span id="stackStatus">Status: Empty</span>
+          </div>
+        </div>
+
+        <!-- Stack Operations -->
+        <div class="operations-section">
+          <h2>Stack Operations</h2>
+          <div class="form-group">
+            <label for="pushValue">Push Element:</label>
+            <input
+              type="number"
+              id="pushValue"
+              placeholder="Enter integer (-1000 to 1000)"
+              min="-1000"
+              max="1000"
+              required
+            />
+            <button id="pushBtn" class="btn btn-primary">Push</button>
+          </div>
+          <div class="form-group">
+            <button id="popBtn" class="btn btn-danger">Pop Element</button>
+            <button id="clearBtn" class="btn btn-danger">Clear Stack</button>
+          </div>
+        </div>
+
+        <!-- Stack Visualization -->
+        <div class="stack-section">
+          <h2>Stack Visualization</h2>
+          <div class="stack-container">
+            <div id="stackDisplay" class="stack-display">
+              <div class="stack-empty">Stack is empty</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="messageArea" class="message-area"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
